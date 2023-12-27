@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ru.suharik.handwrittennumberrecognizer.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<HBox prefHeight="840.0" prefWidth="1200.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom right, #000000FF, #262626FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.suharik.handwrittennumberrecognizer.HelloController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: black;">
+         <children>
+            <Canvas fx:id="canvas" height="800.0" width="800.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="30.0" prefHeight="800.0" prefWidth="340.0" style="-fx-background-color: black;" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>
